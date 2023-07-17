@@ -1,0 +1,14 @@
+.memorabilialist{
+  column-count: 2;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+}
+.memorabiliacard{
+
+}
+.memorabiliacard img {
+ 
+  width: 150px;
+  height: 190px;
+}
