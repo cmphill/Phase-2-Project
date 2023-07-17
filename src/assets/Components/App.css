@@ -1,14 +1,80 @@
-.memorabilialist{
-  column-count: 2;
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
+ .cardcontent{
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  outline-color: black;
+  border-radius: 10px;
+  outline-width: 10px;
+  
+ }
+ .home {
+  background-image: url("https://plantbasednews.org/app/uploads/2021/07/plant-based-news-is-coke-vegan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.memorabiliacard{
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.memorabilialist{
 
+  display: grid;
+  grid-template-columns: repeat(3, .25fr);
+  gap: 2em;
+  justify-content: center;
 }
 .memorabiliacard img {
  
   width: 150px;
   height: 190px;
 }
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("https://media.istockphoto.com/id/499807751/photo/water-drop-on-blue-green-background.jpg?s=170667a&w=0&k=20&c=40r70w4tAMZf_Gal_fciERFZbTTkscO1zWmEyKKpaRs=");
+}
+.NavBar nav a {
+  margin-inline: 1rem;
+
+} 
+
+.NavBar input {
+  display: inline
+}
+
+.addform {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.addform input {
+  height: 10vh;
+  width: 75%
+  
+}
+
+#desc {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: block;
+
+}
+
+.addformcontainer {
+  width: 100%;
+  height: 100%; 
+  background-image: url("https://www.usatoday.com/gcdn/-mm-/6c9b554f24faf8017894ad756ae4e0548d13b30f/c=0-182-3504-2160&r=3504x1978/local/-/media/USATODAY/test/2013/08/10/1376146019000-AP-Earns-Coca-Cola.jpg");
+  background-repeat: repeat;
+  background-size: 100px;
+  
+}
+ 

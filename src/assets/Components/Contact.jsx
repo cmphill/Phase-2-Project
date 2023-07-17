@@ -1,13 +1,9 @@
-
-function Contact () {
-    
-    return (
-        <div>
-            <p>Contact Us</p>
-
-            
-        </div>
-    )
+function Contact() {
+  return (
+    <div>
+      <p>Contact Us</p>
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;
