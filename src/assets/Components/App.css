@@ -1,16 +1,26 @@
- .cardcontent{
+@font-face {
+  font-family: 'Ederson';
+  src: url('./Ederson.ttf') format('truetype');
+}
+.Layout {
+  font-family: 'Ederson';
+  color: red;
+}
+.cardcontent{
   display: flex;
-  width: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightgray;
+  background-image:  url("https://media.istockphoto.com/id/499807751/photo/water-drop-on-blue-green-background.jpg?s=170667a&w=0&k=20&c=40r70w4tAMZf_Gal_fciERFZbTTkscO1zWmEyKKpaRs=");
   outline-color: black;
   border-radius: 10px;
   outline-width: 10px;
-  
- }
- .home {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 8);
+  font-family: 'Ederson';
+  flex-grow: 1;
+  padding: .5rem;
+}
+.home {
   background-image: url("https://plantbasednews.org/app/uploads/2021/07/plant-based-news-is-coke-vegan.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,29 +32,31 @@ body {
   padding: 0;
 }
 .memorabilialist{
-
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(3, .25fr);
   gap: 2em;
   justify-content: center;
 }
 .memorabiliacard img {
- 
   width: 150px;
   height: 190px;
+  border-radius: 10px;
 }
 .NavBar {
   display: flex;
   justify-content: space-between;
   background-image: url("https://media.istockphoto.com/id/499807751/photo/water-drop-on-blue-green-background.jpg?s=170667a&w=0&k=20&c=40r70w4tAMZf_Gal_fciERFZbTTkscO1zWmEyKKpaRs=");
+  
+  
 }
 .NavBar nav a {
   margin-inline: 1rem;
-
+  
 } 
 
 .NavBar input {
-  display: inline
+  display: inline;
 }
 
 .addform {
@@ -58,20 +70,25 @@ body {
 
 .addform input {
   height: 10vh;
-  width: 75%
-  
+  width: 75%;
+  box-sizing: border-box;
+  padding: 5px;
+  font-family: 'Ederson';
 }
 
 #desc {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  box-sizing: border-box;
+  padding: 15px;
   display: block;
+  height: 20vh;
+  width: 75%;
+  font-family: 'Ederson';
 
 }
 
 .addformcontainer {
   width: 100%;
-  height: 100%; 
+  height: 96vh; 
   background-image: url("https://www.usatoday.com/gcdn/-mm-/6c9b554f24faf8017894ad756ae4e0548d13b30f/c=0-182-3504-2160&r=3504x1978/local/-/media/USATODAY/test/2013/08/10/1376146019000-AP-Earns-Coca-Cola.jpg");
   background-repeat: repeat;
   background-size: 100px;

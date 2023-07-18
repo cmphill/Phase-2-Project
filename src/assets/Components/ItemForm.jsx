@@ -50,7 +50,7 @@ function ItemForm({ onAddMemorabilia }) {
           onChange={handleYearChange}
           maxLength="4"
         />
-        <input
+        <textarea
           id="desc"
           type="text"
           name="description"

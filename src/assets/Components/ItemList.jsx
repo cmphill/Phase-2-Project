@@ -11,7 +11,6 @@ function ItemList({ memorabilia }) {
   ));
   return (
     <div>
-      <p>ItemList</p>
       <div className="memorabilialist">{memorabiliaItem}</div>
     </div>
   );

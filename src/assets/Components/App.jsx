@@ -1,7 +1,7 @@
+/* eslint-disable react/jsx-no-bind */
 import {
   createBrowserRouter,
   Route,
-  NavLink,
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
@@ -12,8 +12,6 @@ import About from './About.jsx';
 import Contact from './Contact.jsx';
 import Home from './Home.jsx';
 import ItemForm from './ItemForm.jsx';
-import ItemCard from './ItemCard.jsx';
-import ItemList from './ItemList.jsx';
 // layout
 import Layout from './Layout';
 
