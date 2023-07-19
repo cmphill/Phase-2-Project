@@ -1,12 +1,10 @@
 import { useState } from 'react';
+import ItemList from './ItemList';
 
-function MyCollection({ newCollectionItem }) {
-  const [collection, setCollection] = useState([]);
-  setCollection([...collection, newCollectionItem]);
-  // const {} =collectionTile
+function MyCollection({ filteredArray }) {
   return (
-    <div>
-      <p>Here is Your Collection </p>
+    <div className="collectiondiv">
+      <ItemList memorabilia={filteredArray} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import ItemList from './ItemList';
 
 function Home({ memorabilia }) {
-  console.log(memorabilia);
+  // console.log(memorabilia);
   return (
     <div className="home">
       <ItemList memorabilia={memorabilia} />

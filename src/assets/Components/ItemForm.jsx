@@ -8,21 +8,34 @@ function ItemForm({ onAddMemorabilia }) {
   function handleSubmit(event) {
     event.preventDefault();
     const formElement = event.target;
-    const memorabiliaData = {
-      id: uuidv4(),
-      Name: formElement.name.value,
-      img_url: formElement.image.value,
-      Circa: parseInt(formElement.year.value, 10),
-      'Add to Collection': false,
-    };
-    fetch('http://localhost:3000/memorabilia', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(memorabiliaData),
-    })
-      .then((res) => res.json())
-      .then((data) => onAddMemorabilia(data))
-      .then(formElement.reset());
+    const name = formElement.name.value;
+    const image = formElement.image.value;
+    const year = formElement.year.value;
+    const description = formElement.description.value;
+
+    if (name && image && year && description) {
+      if (/^\d{4}$/.test(year)) {
+        const memorabiliaData = {
+          id: uuidv4(),
+          Name: formElement.name.value,
+          img_url: formElement.image.value,
+          Circa: parseInt(formElement.year.value, 10),
+          'Add to Collection': false,
+        };
+        fetch('http://localhost:3000/memorabilia', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(memorabiliaData),
+        })
+          .then((res) => res.json())
+          .then((data) => onAddMemorabilia(data))
+          .then(formElement.reset());
+      } else {
+        toast.error('Please provide a valid 4-digit year');
+      }
+    } else {
+      toast.error('Please complete the form before submitting');
+    }
   }
   function handleYearChange(event) {
     const year = event.target.value;
@@ -38,10 +51,10 @@ function ItemForm({ onAddMemorabilia }) {
 
   return (
     <div className="addformcontainer">
-      <Toaster className="errormessage" toastOptions={{ duration: 1500 }} />
+      <Toaster id="errormessage" toastOptions={{ duration: 1500 }} />
       <form className="addform" onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Enter Name" />
-        <input type="text" name="image" placeholder="Paste Image Link" />
+        <input type="url" name="image" placeholder="Paste Image Link" />
         <input
           type="number"
           name="year"

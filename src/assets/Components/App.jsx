@@ -9,7 +9,6 @@ import React, { useEffect, useState } from 'react';
 // pages
 import './App.css';
 import About from './MyCollection.jsx';
-import Contact from './Contact.jsx';
 import Home from './Home.jsx';
 import ItemForm from './ItemForm.jsx';
 import ItemDetails from './ItemDetails.jsx';
@@ -20,11 +19,12 @@ import MyCollection from './MyCollection.jsx';
 function App() {
   const [memorabilia, setMemorabilia] = useState([]);
   const [filterMemorabilia, setFilterMemorabilia] = useState('');
+  const [filteredArray, setFilteredArray] = useState([]);
+
   useEffect(() => {
     fetch('http://localhost:3000/memorabilia')
       .then((res) => res.json())
       .then((data) => setMemorabilia(data));
-    console.log(memorabilia);
   }, []);
   function addMemorabilia(newItem) {
     setMemorabilia([...memorabilia, newItem]);
@@ -32,6 +32,14 @@ function App() {
   function searchMemorabilia(search) {
     setFilterMemorabilia(search);
   }
+  function addToCollection(item) {
+    setFilteredArray([...filteredArray, item]);
+    patchCollection()
+  }
+  function patchCollection() {
+    console.log("I was patched")
+  }
+  console.log(filteredArray);
   const displayMemorabilia = memorabilia.filter((item) =>
     item.Name.toLowerCase().includes(filterMemorabilia.toLowerCase())
   );
@@ -42,12 +50,19 @@ function App() {
         element={<Layout onSearchMemorabilia={searchMemorabilia} />}
       >
         <Route index element={<Home memorabilia={displayMemorabilia} />} />
-        <Route path="collection" element={<MyCollection />} />
+        <Route
+          path="collection"
+          element={<MyCollection filteredArray={filteredArray} />}
+        />
         <Route
           path="item/:id"
-          element={<ItemDetails memorabilia={memorabilia} />}
+          element={
+            <ItemDetails
+              memorabilia={memorabilia}
+              addToCollection={addToCollection}
+            />
+          }
         />
-        <Route path="contact" element={<Contact />} />
         <Route
           path="additem"
           element={<ItemForm onAddMemorabilia={addMemorabilia} />}

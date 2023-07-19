@@ -9,6 +9,9 @@
   
   color: red;
 }
+.error {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .cardcontent{
   display: flex;
   flex-direction: column;
@@ -23,7 +26,7 @@
   flex-grow: 1;
   padding: .5rem;
 }
-.home {
+.home, .collectiondiv {
   height: 140vh;
   background-image: url("https://plantbasednews.org/app/uploads/2021/07/plant-based-news-is-coke-vegan.jpg");
   background-repeat: no-repeat;
