@@ -8,12 +8,14 @@ import {
 import React, { useEffect, useState } from 'react';
 // pages
 import './App.css';
-import About from './About.jsx';
+import About from './MyCollection.jsx';
 import Contact from './Contact.jsx';
 import Home from './Home.jsx';
 import ItemForm from './ItemForm.jsx';
+import ItemDetails from './ItemDetails.jsx';
 // layout
 import Layout from './Layout';
+import MyCollection from './MyCollection.jsx';
 
 function App() {
   const [memorabilia, setMemorabilia] = useState([]);
@@ -40,7 +42,11 @@ function App() {
         element={<Layout onSearchMemorabilia={searchMemorabilia} />}
       >
         <Route index element={<Home memorabilia={displayMemorabilia} />} />
-        <Route path="about" element={<About />} />
+        <Route path="collection" element={<MyCollection />} />
+        <Route
+          path="item/:id"
+          element={<ItemDetails memorabilia={memorabilia} />}
+        />
         <Route path="contact" element={<Contact />} />
         <Route
           path="additem"

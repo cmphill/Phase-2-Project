@@ -10,7 +10,7 @@ function Layout({ onSearchMemorabilia }) {
         <div className="NavBar">
           <nav>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="about">About</NavLink>
+            <NavLink to="collection">My Collection </NavLink>
             <NavLink to="additem">Add Item</NavLink>
             <NavLink to="contact">Contact</NavLink>
           </nav>

@@ -1,15 +1,16 @@
-// import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function ItemCard({ image, name, key }) {
-  // const history = useHistory();
+function ItemCard({ image, name, id }) {
+  const navigate = useNavigate();
 
   function handleItemClick() {
     // history.push(`/item/${key}`);
     console.log('hello world', name);
+    navigate(`/item/${id}`);
   }
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-    <div key={key} className="memorabiliacard">
+    <div id={id} className="memorabiliacard">
       <div className="cardcontent">
         <p>{name}</p>
         <img src={image} alt="memorabilia item" />

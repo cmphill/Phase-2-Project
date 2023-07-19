@@ -1,9 +1,12 @@
 @font-face {
-  font-family: 'Ederson';
-  src: url('./Ederson.ttf') format('truetype');
+  font-family: 'Coca-Cola';
+  src: url('./Coca Cola ii.ttf') format('truetype');
+}
+*{
+  font-family: 'Coca-Cola';
 }
 .Layout {
-  font-family: 'Ederson';
+  
   color: red;
 }
 .cardcontent{
@@ -16,14 +19,16 @@
   border-radius: 10px;
   outline-width: 10px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 8);
-  font-family: 'Ederson';
+  
   flex-grow: 1;
   padding: .5rem;
 }
 .home {
+  height: 140vh;
   background-image: url("https://plantbasednews.org/app/uploads/2021/07/plant-based-news-is-coke-vegan.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 125% 125%;
+  background-position: center;
 }
 html,
 body {
@@ -37,6 +42,7 @@ body {
   grid-template-columns: repeat(3, .25fr);
   gap: 2em;
   justify-content: center;
+  font-size: 1.5rem;
 }
 .memorabiliacard img {
   width: 150px;
@@ -44,6 +50,7 @@ body {
   border-radius: 10px;
 }
 .NavBar {
+  font-size: 2rem;
   display: flex;
   justify-content: space-between;
   background-image: url("https://media.istockphoto.com/id/499807751/photo/water-drop-on-blue-green-background.jpg?s=170667a&w=0&k=20&c=40r70w4tAMZf_Gal_fciERFZbTTkscO1zWmEyKKpaRs=");
@@ -57,6 +64,8 @@ body {
 
 .NavBar input {
   display: inline;
+  font-size: 2rem;
+  
 }
 
 .addform {
@@ -66,6 +75,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; 
+  font-family: 'Ederson', Arial, Helvetica, sans-serif;
 }
 
 .addform input {
@@ -73,7 +83,7 @@ body {
   width: 75%;
   box-sizing: border-box;
   padding: 5px;
-  font-family: 'Ederson', Arial, Helvetica, sans-serif;
+  font-size: 32px;
 }
 
 #desc {
@@ -82,16 +92,51 @@ body {
   display: block;
   height: 20vh;
   width: 75%;
-  font-family: 'Ederson';
+  font-size: 20px;
+  
 
 }
 
 .addformcontainer {
   width: 100%;
-  height: 96vh; 
+  height: 80vh; 
   background-image: url("https://www.usatoday.com/gcdn/-mm-/6c9b554f24faf8017894ad756ae4e0548d13b30f/c=0-182-3504-2160&r=3504x1978/local/-/media/USATODAY/test/2013/08/10/1376146019000-AP-Earns-Coca-Cola.jpg");
   background-repeat: repeat;
-  background-size: 100px;
-  
+  background-size: 100px; 
+  margin-top: -.15rem;
 }
- 
+
+.itemdetails {
+  height: 100vh;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+  background-image: url("https://media.istockphoto.com/id/499807751/photo/water-drop-on-blue-green-background.jpg?s=170667a&w=0&k=20&c=40r70w4tAMZf_Gal_fciERFZbTTkscO1zWmEyKKpaRs=");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.itemdetails p, button {
+  font-size: 1.6rem;
+  background-color: rgba(250, 250, 250, .5);
+  
+  border-radius: 10px;
+}
+
+
+#detailimage {
+  /* width: 200px; */
+  width: 12.5rem;
+  max-height: 400px;
+  border-radius: 10px;
+  outline-width: 10px;
+
+}
+.itemdetails h2 {
+  font-size: 32px;
+  margin: 0;
+  padding: 1.2rem 0;
+  background-color: rgba(250, 250, 250, .5);
+  display: inline-block;
+  border-radius: 10px;
+}
