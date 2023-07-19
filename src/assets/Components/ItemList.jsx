@@ -7,6 +7,7 @@ function ItemList({ memorabilia }) {
       key={memorabilias.id}
       name={memorabilias.Name}
       image={memorabilias.img_url}
+      id={memorabilias.id}
     />
   ));
   return (

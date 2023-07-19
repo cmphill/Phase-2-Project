@@ -28,7 +28,7 @@ function ItemForm({ onAddMemorabilia }) {
     const year = event.target.value;
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
-      if (!/^\d{4}$/.test(year) && !''.test(year)) {
+      if (!/^\d{4}$/.test(year) && year.length !== 0) {
         toast.error('Please provide a valid 4-digit year');
       } else {
         setYearError('');
@@ -38,7 +38,7 @@ function ItemForm({ onAddMemorabilia }) {
 
   return (
     <div className="addformcontainer">
-      <Toaster toastOptions={{ duration: 1500 }} />
+      <Toaster className="errormessage" toastOptions={{ duration: 1500 }} />
       <form className="addform" onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Enter Name" />
         <input type="text" name="image" placeholder="Paste Image Link" />
